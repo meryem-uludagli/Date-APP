@@ -95,7 +95,7 @@ const FilterScreen = () => {
         </View>
 
         {/*INTERESTS*/}
-        <View>
+        <View style={FilterStyle.interests}>
           <Text style={FilterStyle.labelsecond}>Interests</Text>
           <View style={FilterStyle.interestsContainer}>
             {interests.map(interest => (
@@ -120,10 +120,13 @@ const FilterScreen = () => {
           </View>
         </View>
         {/*AGE-RANGE*/}
-        <View>
-          <Text style={FilterStyle.age}>
-            Age Range: {ageRange[0]} - {ageRange[1]}
-          </Text>
+        <View style={FilterStyle.ageContainer}>
+          <View style={FilterStyle.rangeTitle}>
+            <Text style={FilterStyle.age}>Age Range:</Text>
+            <Text style={FilterStyle.range}>
+              {ageRange[0]} - {ageRange[1]}
+            </Text>
+          </View>
           <MultiSlider
             values={ageRange}
             min={18}
@@ -138,10 +141,13 @@ const FilterScreen = () => {
         </View>
 
         {/*DISTANCE*/}
-        <View>
-          <Text style={FilterStyle.distance}>
-            Distance: {distance[0]} km - {distance[1]} km
-          </Text>
+        <View style={FilterStyle.ageContainer}>
+          <View style={FilterStyle.rangeTitle}>
+            <Text style={FilterStyle.age}>Distance:</Text>
+            <Text style={FilterStyle.range}>
+              {distance[0]} km - {distance[1]} km
+            </Text>
+          </View>
           <MultiSlider
             values={distance}
             min={5}
@@ -154,7 +160,7 @@ const FilterScreen = () => {
             markerStyle={FilterStyle.marker}
           />
         </View>
-        <View>
+        <View style={FilterStyle.applyContainer}>
           {/*APPLY-BUTTON*/}
           <TouchableOpacity style={FilterStyle.applyButton}>
             <Text style={FilterStyle.applyButtonText}>Apply</Text>

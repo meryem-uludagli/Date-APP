@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from '../theme/Colors';
+import {width, height} from '../utils/constants';
 
 export const InfoScreenStyle = StyleSheet.create({
   container: {
@@ -7,98 +8,96 @@ export const InfoScreenStyle = StyleSheet.create({
     backgroundColor: Colors.LIGHT_GRAY,
   },
   scrollContainer: {
-    paddingBottom: 20,
+    paddingBottom: height * 0.02,
   },
   profileImage: {
     width: '100%',
-    height: 400,
+    height: height * 0.4,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
   card: {
     backgroundColor: Colors.WHITE,
-    margin: 20,
-    padding: 30,
+    margin: width * 0.05,
+    padding: width * 0.08,
     borderRadius: 20,
     shadowColor: Colors.BLACK,
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 5,
-    marginBottom: 30,
+    marginBottom: height * 0.05,
   },
   name: {
-    fontSize: 24,
+    fontSize: width * 0.06,
     fontWeight: 'bold',
     color: Colors.DARKER_GRAY,
   },
   location: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     color: Colors.SOFT_GRAY,
-    marginVertical: 5,
+    marginVertical: height * 0.005,
   },
   matchContainer: {
     backgroundColor: Colors.LIGHT_GREEN,
     alignSelf: 'flex-start',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingHorizontal: width * 0.04,
+    paddingVertical: height * 0.01,
     borderRadius: 10,
-    marginTop: 5,
+    marginTop: height * 0.005,
   },
   matchText: {
     color: Colors.DARK_GREEN,
     fontWeight: 'bold',
   },
   bio: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     color: Colors.SOFT_GRAY,
-    marginTop: 10,
-    lineHeight: 22,
+    marginTop: height * 0.02,
+    lineHeight: height * 0.03,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     color: Colors.DARKER_GRAY,
-    marginTop: 20,
+    marginTop: height * 0.02,
   },
-
   noInterestText: {
-    fontSize: 14,
+    fontSize: width * 0.04,
     color: Colors.SOFT_GRAY,
-    marginTop: 5,
+    marginTop: height * 0.005,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 15,
-    marginTop: 20,
+    gap: width * 0.04,
+    marginTop: height * 0.02,
     flexWrap: 'wrap',
     alignItems: 'center',
   },
   giftButton: {
     backgroundColor: Colors.LIGHT_ORANGE,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.02,
     alignSelf: 'center',
-
     borderRadius: 20,
   },
   likeButton: {
     backgroundColor: Colors.LIGHT_RED,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.05,
     borderRadius: 20,
   },
   shareButton: {
     backgroundColor: Colors.GREEN,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.05,
     borderRadius: 20,
   },
-
   buttonText: {
     color: Colors.WHITE,
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: width * 0.04,
   },
 });
+
 export default {InfoScreenStyle};

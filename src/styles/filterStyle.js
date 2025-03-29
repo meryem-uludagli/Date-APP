@@ -1,8 +1,6 @@
-import {StyleSheet, Dimensions} from 'react-native';
-import {fonts} from '../../node_modules/@react-navigation/native/lib/module/theming/fonts';
+import {StyleSheet} from 'react-native';
 import {Colors} from '../theme/Colors';
-
-const {width, height} = Dimensions.get('window');
+import {width, height} from '../utils/constants';
 
 const FilterStyle = StyleSheet.create({
   container: {
@@ -13,35 +11,36 @@ const FilterStyle = StyleSheet.create({
     justifyContent: 'center',
   },
   backButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
+    width: width * 0.03,
+    height: height * 0.03,
+    alignSelf: 'flex-start',
   },
   left: {
-    width: 30,
-    height: 40,
+    width: width * 0.05,
+    height: height * 0.05,
   },
   text: {
-    fontSize: 30,
+    fontSize: width * 0.08,
     fontWeight: 'bold',
     color: Colors.DEEP_PINK,
-    top: 60,
+    marginTop: 20,
   },
   textContainer: {
-    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: 10,
+    justifyContent: 'flex-start',
     alignItems: 'center',
     width: '100%',
   },
-
   genderContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-    marginTop: 90,
+    marginTop: height * 0.05,
   },
   genderButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.06,
     borderRadius: 25,
     borderWidth: 2,
     borderColor: Colors.DEEP_PINK,
@@ -59,45 +58,45 @@ const FilterStyle = StyleSheet.create({
     color: Colors.WHITE,
   },
   location: {
-    marginTop: 40,
-    paddingHorizontal: 20,
+    marginTop: height * 0.05,
+    paddingHorizontal: width * 0.05,
   },
   label: {
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     color: Colors.DARKER_GRAY,
   },
   locationInput: {
     backgroundColor: Colors.WHITE,
-    padding: 10,
-    top: 10,
+    padding: height * 0.02,
+    marginTop: height * 0.02,
     borderRadius: 10,
     width: '100%',
   },
+  interests: {
+    paddingHorizontal: 20,
+    marginTop: 10,
+  },
   labelsecond: {
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     color: Colors.DARKER_GRAY,
-    top: 20,
-    left: 25,
   },
   interestsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
-    top: 28,
+    gap: 10,
+    marginTop: height * 0.04,
     width: '100%',
   },
   interestButton: {
-    paddingVertical: 5,
-    paddingHorizontal: 15,
+    paddingVertical: height * 0.01,
+    paddingHorizontal: width * 0.04,
     borderRadius: 20,
     borderWidth: 2,
     borderColor: Colors.DEEP_PINK,
-    marginRight: 10,
-    marginBottom: 10,
   },
   selectedInterest: {
     backgroundColor: Colors.DEEP_PINK,
@@ -109,48 +108,55 @@ const FilterStyle = StyleSheet.create({
   selectedInterestText: {
     color: Colors.WHITE,
   },
+  ageContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+    paddingHorizontal: 10,
+  },
+  rangeTitle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
   age: {
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     color: Colors.BLACK,
-    top: 30,
-    left: 25,
+  },
+  range: {
+    fontSize: width * 0.04,
   },
   selectedSlider: {
     backgroundColor: Colors.DEEP_PINK,
-    top: 30,
-    left: 50,
   },
   unselectedSlider: {
     backgroundColor: Colors.MEDIUM_GRAY,
-    top: 30,
-    left: 50,
   },
   marker: {
     backgroundColor: Colors.DEEP_PINK,
-    width: 25,
-    height: 25,
-    top: 30,
-    left: 50,
-    borderRadius: 12.5,
+    width: width * 0.06,
+    height: height * 0.03,
   },
   distance: {
-    fontSize: 18,
+    fontSize: width * 0.05,
     fontWeight: 'bold',
     color: Colors.BLACK,
-    top: 35,
-    left: 25,
   },
+  applyContainer: {alignItems: 'center'},
   applyButton: {
     backgroundColor: Colors.DEEP_PINK,
-    paddingVertical: 15,
+    width: width * 0.88,
+    height: height * 0.05,
+    justifyContent: 'center',
     borderRadius: 10,
     alignItems: 'center',
-    marginTop: 70,
-    width: '88%',
-    left: 22,
+    marginTop: height * 0.04,
   },
-  applyButtonText: {color: Colors.WHITE, fontSize: 16, fontWeight: 'bold'},
+  applyButtonText: {
+    color: Colors.WHITE,
+    fontSize: width * 0.04,
+    fontWeight: 'bold',
+  },
 });
 
 export {FilterStyle};

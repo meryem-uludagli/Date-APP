@@ -1,7 +1,6 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Colors} from '../theme/Colors';
-
-const {width, height} = Dimensions.get('window');
+import {height, width} from '../utils/constants';
 
 const ProfileStyle = StyleSheet.create({
   container: {

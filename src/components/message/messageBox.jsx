@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import MessageStyle from '../../styles/messageStyle';
 const MessageBox = ({item}) => {
   return (
@@ -12,4 +12,3 @@ const MessageBox = ({item}) => {
   );
 };
 export default MessageBox;
-const styles = StyleSheet.create({});
