@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import {Colors} from '../theme/Colors';
 
 const {width, height} = Dimensions.get('window');
 
@@ -25,11 +26,7 @@ const HomeStyle = StyleSheet.create({
     width: width * 0.9,
     height: height * 0.6,
     borderRadius: 20,
-    shadowColor: '#000000',
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
     elevation: 5,
-    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
@@ -56,16 +53,16 @@ const HomeStyle = StyleSheet.create({
     textAlign: 'center',
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#fff',
+    color: Colors.WHITE,
   },
   location: {
     fontSize: 18,
-    color: '#ddd',
+    color: Colors.SOFT_GRAY,
     textAlign: 'center',
   },
   bio: {
     fontSize: 14,
-    color: '#dddddd',
+    color: Colors.SOFT_GRAY,
     textAlign: 'center',
   },
   buttonContainer: {
@@ -81,8 +78,8 @@ const HomeStyle = StyleSheet.create({
     borderRadius: 37.5,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffffff',
-    shadowColor: '#000000',
+    backgroundColor: Colors.WHITE,
+    shadowColor: Colors.BLACK,
     shadowOpacity: 0.15,
     shadowRadius: 6,
     elevation: 4,

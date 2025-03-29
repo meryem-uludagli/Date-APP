@@ -1,15 +1,15 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import {Colors} from '../theme/Colors';
 
 const {width, height} = Dimensions.get('window');
 
 const ProfileStyle = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.85)',
+    backgroundColor: Colors.WHITE,
+  },
+  darkBackground: {
+    backgroundColor: Colors.BLACK,
   },
   scrollContainer: {
     paddingHorizontal: width * 0.05,
@@ -24,14 +24,14 @@ const ProfileStyle = StyleSheet.create({
     height: width * 0.3,
     borderRadius: (width * 0.3) / 2,
     borderWidth: 3,
-    borderColor: '#ccc',
+    borderColor: Colors.MEDIUM_GRAY,
   },
   section: {
     marginBottom: height * 0.04,
     backgroundColor: 'white',
     padding: width * 0.04,
     borderRadius: 10,
-    shadowColor: '#000',
+    shadowColor: Colors.BLACK,
     shadowOpacity: 0.1,
     shadowRadius: 6,
     elevation: 4,
@@ -41,7 +41,7 @@ const ProfileStyle = StyleSheet.create({
     fontSize: width * 0.05,
     fontWeight: 'bold',
     marginBottom: height * 0.015,
-    color: '#333',
+    color: Colors.DARKER_GRAY,
   },
   infoRow: {
     flexDirection: 'row',
@@ -51,15 +51,15 @@ const ProfileStyle = StyleSheet.create({
   label: {
     fontSize: width * 0.045,
     fontWeight: 'bold',
-    color: '#555',
+    color: Colors.DARKER_GRAY,
   },
   value: {
     fontSize: width * 0.045,
-    color: '#333',
+    color: Colors.DARKER_GRAY,
   },
   text: {
     fontSize: width * 0.045,
-    color: '#444',
+    color: Colors.DARK_GRAY,
   },
 });
 export {ProfileStyle};

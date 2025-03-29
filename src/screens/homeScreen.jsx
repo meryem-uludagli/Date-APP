@@ -32,12 +32,12 @@ const HomeScreen = ({navigation}) => {
     <ImageBackground
       source={require('../assets/images/back5png.png')}
       style={HomeStyle.backgroundImage}>
-      {/*HEADERHOME*/}
+      {/*HEADER-HOME*/}
 
       <SafeAreaView style={HomeStyle.container}>
         <HeaderHome />
 
-        {/*HOMECARD*/}
+        {/*HOME-BUTTON*/}
         <View style={HomeStyle.swiperContainer}>
           <Swiper
             cards={users}
@@ -61,6 +61,7 @@ const HomeScreen = ({navigation}) => {
               setIndex(users.length - 1);
             }}
             cardIndex={index}
+            pointerEvents="box-none"
             backgroundColor={'transparent'}
             stackSize={3}
             disableTopSwipe
@@ -70,7 +71,7 @@ const HomeScreen = ({navigation}) => {
           />
         </View>
 
-        {/*HOME BUTTON*/}
+        {/*HOME-BUTTON*/}
         <HomeButton />
       </SafeAreaView>
     </ImageBackground>

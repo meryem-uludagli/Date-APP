@@ -20,14 +20,14 @@ const HeaderMessage = () => {
       <View style={styles.searchContainer}>
         <TouchableOpacity>
           <Image
-            source={require('../assets/images/search.png')}
+            source={require('../../assets/images/search.png')}
             style={styles.icon}
           />
         </TouchableOpacity>
         <TextInput style={styles.searchBar} placeholder="Search..." />
         <TouchableOpacity>
           <Image
-            source={require('../assets/images/heart.png')}
+            source={require('../../assets/images/heart.png')}
             style={styles.icon}
           />
         </TouchableOpacity>

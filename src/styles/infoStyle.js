@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {Colors} from '../theme/Colors';
 
 export const InfoScreenStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F8F8',
+    backgroundColor: Colors.LIGHT_GRAY,
   },
   scrollContainer: {
     paddingBottom: 20,
@@ -15,11 +16,11 @@ export const InfoScreenStyle = StyleSheet.create({
     borderBottomRightRadius: 30,
   },
   card: {
-    backgroundColor: '#FFF',
+    backgroundColor: Colors.WHITE,
     margin: 20,
     padding: 30,
     borderRadius: 20,
-    shadowColor: '#000',
+    shadowColor: Colors.BLACK,
     shadowOpacity: 0.1,
     shadowRadius: 10,
     elevation: 5,
@@ -28,15 +29,15 @@ export const InfoScreenStyle = StyleSheet.create({
   name: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: Colors.DARKER_GRAY,
   },
   location: {
     fontSize: 16,
-    color: '#777',
+    color: Colors.SOFT_GRAY,
     marginVertical: 5,
   },
   matchContainer: {
-    backgroundColor: '#D4F4DD',
+    backgroundColor: Colors.LIGHT_GREEN,
     alignSelf: 'flex-start',
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -44,39 +45,25 @@ export const InfoScreenStyle = StyleSheet.create({
     marginTop: 5,
   },
   matchText: {
-    color: '#2E8B57',
+    color: Colors.DARK_GREEN,
     fontWeight: 'bold',
   },
   bio: {
     fontSize: 16,
-    color: '#555',
+    color: Colors.SOFT_GRAY,
     marginTop: 10,
     lineHeight: 22,
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#444',
+    color: Colors.DARKER_GRAY,
     marginTop: 20,
   },
-  interestContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginTop: 10,
-  },
-  interestTag: {
-    backgroundColor: '#FADADD',
-    color: '#D63384',
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    borderRadius: 20,
-    marginRight: 10,
-    marginBottom: 10,
-    fontSize: 14,
-  },
+
   noInterestText: {
     fontSize: 14,
-    color: '#888',
+    color: Colors.SOFT_GRAY,
     marginTop: 5,
   },
   buttonContainer: {
@@ -88,7 +75,7 @@ export const InfoScreenStyle = StyleSheet.create({
     alignItems: 'center',
   },
   giftButton: {
-    backgroundColor: '#FFDD57',
+    backgroundColor: Colors.LIGHT_ORANGE,
     paddingVertical: 10,
     paddingHorizontal: 20,
     alignSelf: 'center',
@@ -96,20 +83,20 @@ export const InfoScreenStyle = StyleSheet.create({
     borderRadius: 20,
   },
   likeButton: {
-    backgroundColor: '#FF3B30',
+    backgroundColor: Colors.LIGHT_RED,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
   },
   shareButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.GREEN,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 20,
   },
 
   buttonText: {
-    color: '#FFF',
+    color: Colors.WHITE,
     fontWeight: 'bold',
     fontSize: 16,
   },

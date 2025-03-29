@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text, FlatList, Image, SafeAreaView} from 'react-native';
-import HeaderMessage from '../components/headerMessage';
+import {Text, FlatList, SafeAreaView} from 'react-native';
+import HeaderMessage from '../components/message/headerMessage';
 import MessageStyle from '../styles/messageStyle';
+import ActiveUsers from '../components/message/activeUsers';
+import MessageBox from '../components/message/messageBox';
 
 const messages = [
   {
@@ -69,15 +71,7 @@ const MessageScreen = () => {
               horizontal
               keyExtractor={item => item.id}
               contentContainerStyle={{paddingHorizontal: 10}}
-              renderItem={({item}) => (
-                <View style={MessageStyle.storyContainer}>
-                  <Image
-                    source={item.avatar}
-                    style={MessageStyle.storyAvatar}
-                  />
-                  <Text style={MessageStyle.storyName}>{item.name}</Text>
-                </View>
-              )}
+              renderItem={({item}) => <ActiveUsers item={item} />}
               showsHorizontalScrollIndicator={false}
             />
 
@@ -87,15 +81,7 @@ const MessageScreen = () => {
         data={messages}
         keyExtractor={item => item.id}
         contentContainerStyle={{paddingHorizontal: 10, marginTop: 20}}
-        renderItem={({item}) => (
-          <View style={MessageStyle.messageContainer}>
-            <Image source={item.avatar} style={MessageStyle.messageAvatar} />
-            <View style={MessageStyle.messageContent}>
-              <Text style={MessageStyle.messageName}>{item.name}</Text>
-              <Text style={MessageStyle.messageText}>{item.message}</Text>
-            </View>
-          </View>
-        )}
+        renderItem={({item}) => <MessageBox item={item} />}
         showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>

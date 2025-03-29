@@ -1,7 +1,8 @@
 import {StyleSheet} from 'react-native';
+import {Colors} from '../theme/Colors';
 
 const MessageStyle = StyleSheet.create({
-  container: {flex: 1, backgroundColor: 'white'},
+  container: {flex: 1, backgroundColor: Colors.WHITE},
   storyContainer: {
     alignItems: 'center',
     marginHorizontal: 5,
@@ -16,7 +17,7 @@ const MessageStyle = StyleSheet.create({
     height: 60,
     borderRadius: 30,
     borderWidth: 2,
-    borderColor: '#EC7FA9',
+    borderColor: Colors.DEEP_PINK,
   },
   storyName: {marginTop: 5, fontSize: 12},
   message: {fontSize: 20, fontWeight: 'bold', top: 13, left: 5},
@@ -26,7 +27,7 @@ const MessageStyle = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     top: 20,
-    borderBottomColor: '#ddd',
+    borderBottomColor: Colors.MEDIUM_GRAY,
   },
   messageAvatar: {
     width: 50,
@@ -42,7 +43,7 @@ const MessageStyle = StyleSheet.create({
     fontSize: 16,
   },
   messageText: {
-    color: 'gray',
+    color: Colors.GRAY,
   },
 });
 
