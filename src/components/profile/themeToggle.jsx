@@ -1,6 +1,7 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet} from 'react-native';
 import {Sun, Moon} from 'lucide-react-native';
+import {Colors} from '../../theme/Colors';
 
 const ThemeToggle = ({darkMode, setDarkMode}) => {
   const toggleTheme = () => {
@@ -10,9 +11,9 @@ const ThemeToggle = ({darkMode, setDarkMode}) => {
   return (
     <TouchableOpacity onPress={toggleTheme} style={styles.button}>
       {darkMode ? (
-        <Sun size={24} color="#FFB200" />
+        <Sun size={24} color={Colors.DARK_YELLOW} />
       ) : (
-        <Moon size={24} color="black" />
+        <Moon size={24} color={Colors.BLACK} />
       )}
     </TouchableOpacity>
   );

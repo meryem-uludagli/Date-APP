@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet, View, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {TABNAVIGATOR} from '../utils/Routes';
+import {Colors} from '../theme/Colors';
 const HeaderHome = () => {
   const navigation = useNavigation();
   return (
@@ -17,7 +19,8 @@ const HeaderHome = () => {
           style={styles.headerText}
         />
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('FilterScreen')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(TABNAVIGATOR.FILTER)}>
         <Image
           source={require('../assets/images/filter.png')}
           style={styles.filterIcon}
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     width: '100%',
     height: 80,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: Colors.WHITE,
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 7,

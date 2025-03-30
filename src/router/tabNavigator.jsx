@@ -4,6 +4,7 @@ import MessageScreen from '../screens/messageScreen';
 import ProfileScreen from '../screens/profileScreen';
 import {TABNAVIGATOR} from '../utils/Routes';
 import TabIcon from '../components/router/tabIcon';
+import {Colors} from '../theme/Colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ const TabNavigator = () => {
           bottom: 20,
           left: 20,
           right: 20,
-          backgroundColor: '#fff',
+          backgroundColor: Colors.WHITE,
           elevation: 5,
           borderRadius: 25,
           height: 70,

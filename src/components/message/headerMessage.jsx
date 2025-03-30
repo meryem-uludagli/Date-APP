@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import {Colors} from '../../theme/Colors';
 
 const HeaderMessage = () => {
   return (
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f2f2f2',
+    backgroundColor: Colors.LIGHT_GRAY,
     marginHorizontal: 20,
     padding: 10,
     borderRadius: 10,
